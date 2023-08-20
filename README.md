@@ -73,11 +73,7 @@ run function save_MVS_npy in test.py
 run function plot_tsne in test.py
 - generate images for paper
 download mitsuba2 (https://www.mitsuba-renderer.org/)
-save npy file by the functions in test.py
-cd plot file
-change npy path in ./plot.sh
-run source setpath.sh (in mitsuba2 file)
-run ./plot.sh
+save point cloud files by the functions in test.py and plot files with mitsuba2
 - visualization in web
 cd visualization file
 run python3 app.py
