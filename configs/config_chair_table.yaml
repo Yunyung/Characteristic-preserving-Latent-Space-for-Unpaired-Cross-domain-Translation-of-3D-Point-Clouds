@@ -1,0 +1,69 @@
+common: 
+  # dataset_path: ../../datasets/data/shapenet/
+  # class_a_choice: "chair"
+  # class_b_choice: "table"
+  dataset_path: ./logan_data/chair-table/train
+  val_dataset_path: ./logan_data/chair-table/val
+  class_a_choice: "chair"
+  class_b_choice: "table"
+
+  # for ablation study
+  E: with # with or without
+  G: with # with or without
+  T: multi # single or multi
+
+  weight_path: ./weights/chair_table
+
+  point_num: 2048
+  support: 10
+  DEGREE: [2, 2, 2, 2, 2, 4, 16]
+  G_FEAT: [256, 512, 256, 256, 128, 128, 64, 3]
+  D_FEAT: [3,  64,  128, 256, 512]
+  z_size: 256
+
+  num_classes: 2
+  input_channels: 0     # feature channels except (x, y, z)
+  relation_prior: 1
+
+train:
+  batch_size: 8
+  e_lr: 0.0004 # 0-100: 0.0004 100-200: 0.0002 200-: 0.0001
+  t_lr: 0.0020 # 0-100: 0.0020 100-200: 0.0010 200-: 0.0005
+  d_lr: 0.0016 # 0-100: 0.0016 100-200: 0.0008 200-: 0.0004
+  D_iter: 2
+  G_iter: 1
+  T_iter: 1
+  lambdaGP: 10
+
+  epochs: 400
+  pretrained_epoch: 0
+
+  save_img_path: ./valid_imgs_test/chair_table
+  
+  recons_coef: 10
+  cycle_coef: 10
+  fp_coef: 10
+  center_coef: 5
+  cp_coef: 5
+
+  save_pre_epoch: 1
+  log_pre_iter: 10
+
+test:
+  split: test
+  drop_last: True
+
+  batch_size: 20
+  autoencoder_epoch: 400
+  save_img_path: ./test_imgs/chair_table
+  save_a_img_path: ./test_imgs/chair_table/chair_shape_mixing
+  save_b_img_path: ./test_imgs/chair_table/table_shape_mixing
+
+  plot_npy_path: ../plot/npy/chair_table
+  plot_xml_path: ../plot/xml/chair_table
+  plot_jpg_path: ../plot/jpg/chair_table
+
+  points_index: [1629, 1627, 1598]
+  
+  points_index_1: 576
+  points_index_2: 503
