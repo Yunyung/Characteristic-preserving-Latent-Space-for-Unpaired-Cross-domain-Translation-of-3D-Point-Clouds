@@ -13,9 +13,9 @@ Jia-Wen Zheng, Jhen-Yung Hsu, Chih-Chia Li, and I-Chen Lin
 - flask
 
 ## Install
-We conducted experiments on NVIDIA GeForce RTX 2080 SUPER and RTX 2070, and installed packages in the following process:
+We conducted experiments on NVIDIA GeForce RTX 2080 SUPER, RTX 2070, NVIDIA Tesla P100 GPU, and installed packages in the following process:
 ```
-conda create -n CharPresTrans python=3.6
+- conda create -n CharPresTrans python=3.6
 - conda install pytorch=0.4.1 cuda92 -c pytorch
 - conda install -c pytorch torchvision=0.2.1
 - conda install -c conda-forge pyntcloud
