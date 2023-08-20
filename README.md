@@ -1,8 +1,8 @@
-### [Characteristic-preserving Latent Space for Unpaired Cross-domain Translation of 3D-Point Clouds](https://ieeexplore.ieee.org/abstract/document/10158055/)
+## [Characteristic-preserving Latent Space for Unpaired Cross-domain Translation of 3D-Point Clouds](https://ieeexplore.ieee.org/abstract/document/10158055/)
 
 Jia-Wen Zheng, Jhen-Yung Hsu, Chih-Chia Li, and I-Chen Lin
 
-### Prerequisites
+## Prerequisites
 - ubuntu 18.04
 - python 3.7
 - pytorch 0.4.1
@@ -12,8 +12,7 @@ Jia-Wen Zheng, Jhen-Yung Hsu, Chih-Chia Li, and I-Chen Lin
 - mitsuba2 (https://www.mitsuba-renderer.org/)
 - flask
 
-### 
-### Install
+## Install
 We conducted experiments on NVIDIA GeForce RTX 2080 SUPER and RTX 2070, and installed packages in the following process:
 ```
 conda create -n CharPresTrans python=3.6
@@ -27,7 +26,7 @@ conda create -n CharPresTrans python=3.6
 - conda install -c anaconda scikit-learn
 ```
 
-### Dataset
+## Dataset
 - Shapenet
 - LOGAN
     - https://github.com/kangxue/LOGAN
@@ -37,7 +36,7 @@ conda create -n CharPresTrans python=3.6
 - Our Paired Arm-and-armless Chairs Dataset
     - https://drive.google.com/drive/folders/1iteBcpUWKzyHEWRt65F4n6qc95C6q2Zk?usp=sharing
 
-### Usage
+## Usage
 - training:
     change dataset_path in configs/config_chair_table.yaml
     run visdom
@@ -98,7 +97,7 @@ run python3 app_screenshot.py to generate multiple views
 upload images to https://gifmaker.me/ to generate gif files
 
 
-### Reference
+## Reference
 LOGAN, https://github.com/kangxue/LOGAN
 
 PointNet++, https://github.com/charlesq34/pointnet2
