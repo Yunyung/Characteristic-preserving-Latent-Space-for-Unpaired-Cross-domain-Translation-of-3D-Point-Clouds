@@ -25,8 +25,8 @@ conda create -n CharPresTrans python=3.6
 - conda install -c conda-forge matplotlib
 - conda install -c conda-forge cupy=9.6
 - conda install -c anaconda scikit-learn
-
 ```
+
 ### Dataset
 - Shapenet
 - LOGAN
@@ -34,8 +34,8 @@ conda create -n CharPresTrans python=3.6
 - P2P-Net
     - https://github.com/kangxue/P2P-NET
 
-Our Paired Arm-and-armless Chairs:
-https://drive.google.com/drive/folders/1iteBcpUWKzyHEWRt65F4n6qc95C6q2Zk?usp=sharing
+- Our Paired Arm-and-armless Chairs Dataset
+    - https://drive.google.com/drive/folders/1iteBcpUWKzyHEWRt65F4n6qc95C6q2Zk?usp=sharing
 
 ### Usage
 - training:
@@ -100,7 +100,11 @@ upload images to https://gifmaker.me/ to generate gif files
 
 ### Reference
 LOGAN, https://github.com/kangxue/LOGAN
+
 PointNet++, https://github.com/charlesq34/pointnet2
+
 P2P-Net, https://github.com/kangxue/P2P-NET
+
 RSCNN, https://github.com/Yochengliu/Relation-Shape-CNN
+
 TreeGCN, https://openaccess.thecvf.com/content_ICCV_2019/papers/Shu_3D_Point_Cloud_Generative_Adversarial_Network_Based_on_Tree_Structured_ICCV_2019_paper.pdf
