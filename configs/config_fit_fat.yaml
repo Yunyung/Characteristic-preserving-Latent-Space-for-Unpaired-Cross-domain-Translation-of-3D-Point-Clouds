@@ -1,0 +1,54 @@
+common: 
+  dataset_path: ../datasets/data/fit-fat/
+  class_a_choice: "fit"
+  class_b_choice: "fat"
+
+  point_num: 2048
+  weight_path: weights/fit_fat
+
+  support: 20
+  DEGREE: [2, 4, 4, 4, 16]
+  G_FEAT: [256, 512, 256, 128, 64, 3]
+  D_FEAT: [3,  64,  128, 256, 512]
+  z_size: 256
+
+  num_classes: 2
+
+  input_channels: 0     # feature channels except (x, y, z)
+  relation_prior: 1
+
+
+train:
+  batch_size: 24
+  e_lr: 0.0001 # 0-100: 0.0004 100-200: 0.0002 200-: 0.0001
+  t_lr: 0.0005 # 0-100: 0.0020 100-200: 0.0010 200-: 0.0005
+  d_lr: 0.0004 # 0-100: 0.0016 100-200: 0.0008 200-: 0.0004
+  
+  D_iter: 2
+  G_iter: 1
+  T_iter: 2
+  lambdaGP: 10
+
+  epochs: 400
+  pretrained_epoch: 0
+  save_img_path: ./valid_imgs/fit_fat
+  
+  recons_coef: 10
+  cycle_coef: 10
+  fp_coef: 10
+  center_coef: 5
+  cp_coef: 5
+
+  save_pre_epoch: 5
+  log_pre_iter: 50
+
+test:
+  batch_size: 20
+  autoencoder_epoch: 400
+  save_img_path: ./test_imgs/fit_fat
+  
+  plot_npy_path: ../plot/npy/fit_fat
+  plot_xml_path: ../plot/xml/fit_fat
+  plot_jpg_path: ../plot/jpg/fit_fat
+
+  points_index: [36, 49, 83, 130, 409]
