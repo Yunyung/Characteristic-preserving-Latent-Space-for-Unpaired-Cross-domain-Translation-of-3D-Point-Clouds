@@ -15,15 +15,16 @@ Jia-Wen Zheng, Jhen-Yung Hsu, Chih-Chia Li, and I-Chen Lin
 ## Install
 We conducted experiments on NVIDIA GeForce RTX 2080 SUPER, RTX 2070 and NVIDIA Tesla P100 GPU, and installed packages in the following process:
 ```
-- conda create -n CharPresTrans python=3.6
-- conda install pytorch=0.4.1 cuda92 -c pytorch
-- conda install -c pytorch torchvision=0.2.1
-- conda install -c conda-forge pyntcloud
-- pip install visdom
-- pip install pyyaml
-- conda install -c conda-forge matplotlib
-- conda install -c conda-forge cupy=9.6
-- conda install -c anaconda scikit-learn
+conda create -n CharPresTrans python=3.6
+conda activate CharPresTrans
+conda install pytorch=0.4.1 cuda92 -c pytorch
+conda install -c pytorch torchvision=0.2.1
+conda install -c conda-forge pyntcloud
+pip install visdom
+pip install pyyaml
+conda install -c conda-forge matplotlib
+conda install -c conda-forge cupy=9.6
+conda install -c anaconda scikit-learn
 ```
 
 ## Dataset
